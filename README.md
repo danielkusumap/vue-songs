@@ -1,5 +1,7 @@
 # coba-api-song
 
+this project uses local API (not published yet)
+
 ## Project setup
 ```
 npm install
