@@ -1,6 +1,6 @@
 # coba-api-song
 
-this project uses local API (not published yet)
+this project uses local API. you can try the API by cloning <a href="https://github.com/danielkusumap/songs-api">this project</a>
 
 ## Project setup
 ```
