@@ -1,25 +1,16 @@
 <template>
   <div
-    class="
-      d-flex
-      justify-content-center
-      m-auto
-      p-2
-      pt-3
-      sticky-top
-      bg-white
-      test
-    "
+    class="d-flex justify-content-center m-auto p-2 pt-3 sticky-top bg-white"
   >
     <div class="me-2 w-50">
       <b-form-input
-        v-model="inputArtist"
+      id="input_artist_form"
         placeholder="Enter artist name"
         v-on:keyup.enter="sendInput"
       ></b-form-input>
     </div>
     <div>
-      <b-button class="me-2" variant="primary" @click="sendInput"
+      <b-button id="cariArtist" class="me-2" variant="primary" @click="sendInput"
         >Cari</b-button
       >
     </div>
@@ -76,7 +67,7 @@
 export default {
   name: "SearchField",
   props: {
-    years_list: Array,
+    years_list: Array
   },
   data() {
     return {
@@ -89,6 +80,7 @@ export default {
   },
   methods: {
     sendInput() {
+      this.inputArtist = document.getElementById("input_artist_form").value
       var url = "http://127.0.0.1:5000/api?artist=" + this.inputArtist;
       this.$emit("input", url, this.inputArtist);
     },
@@ -111,7 +103,7 @@ export default {
       this.only_year = false;
       this.gte_year = true;
       this.final_year = true;
-    },
+    }
   },
 };
 </script>
