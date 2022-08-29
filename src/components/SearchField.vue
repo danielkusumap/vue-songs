@@ -81,12 +81,12 @@ export default {
   methods: {
     sendInput() {
       this.inputArtist = document.getElementById("input_artist_form").value
-      var url = "http://127.0.0.1:5000/api?artist=" + this.inputArtist;
+      var url = "https://songs-api-dnl.herokuapp.com/api?artist=" + this.inputArtist;
       this.$emit("input", url, this.inputArtist);
     },
     ok() {
       var url =
-        "http://127.0.0.1:5000/api?artist=" +
+        "https://songs-api-dnl.herokuapp.com/api?artist=" +
         this.inputArtist +
         "&year=" +
         this.selected.toString() +
